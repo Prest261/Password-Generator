@@ -92,6 +92,11 @@ var uppercaseCharacters = [
 ];
 var password = [];
 var totalchar = [];
+var passwordGenerator = document.querySelector("#generate");
+var outputArea = document.querySelector("#output");
+
+passwordGenerator.addEventListener("click", questions);
+
 // create a function that askes the user about the specifics of the password:
 // length between 8-128 characters
 // lowercase
@@ -141,6 +146,8 @@ if (number === true) {
   getChar(numericCharacters);
 }
 
+// else if user does not select a valid character type
+// then error message & repeat questions
 if (totalchar.length === 0){
     alert("not valid selection, please try again")
     questions()
@@ -154,18 +161,36 @@ if (totalchar.length === 0){
     // convert to string:
     var passStr = password.join("");
     console.log(passStr);
-    // else if user does not select a valid character type
-    // then error message
+    
+}
 }
 
-}
 
+// function for generating the password with the length specified
 function getChar(arr) {
   var char = arr[Math.floor(Math.random() * arr.length)];
   password.push(char);
   totalchar = totalchar.concat(arr);
   console.log(totalchar);
 }
-// password = ["$", "2", "a"]    passlength=10   7 more
 
-questions();
+
+
+// set copy text to clipboard to start when clicked
+
+outputArea.addEventListener("click", clipboard);
+outputArea.textContent = "passStr", passStr;
+
+// function for copying to clipboard
+function clipboard() {
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+    console.log(password);
+  }

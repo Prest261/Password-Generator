@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"
+    <meta charset="UTF-8">
+    <!-- <link rel= "stylesheet reset" href="http://meyerweb.com/eric/tools/css/reset/  -->
+    <!-- v2.0 | 20110126"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
     <title>Password Generator</title>
 </head>
 <body>
-    <h1>Generate a Password</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm col-md col-lg">
+                <h1>Password Generator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm col-md -col-lg">
+                <h2>Generate a Password</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm col-md col-lg">
+                <form>
+                    <input type="text" id="output" value="">
+                </form>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm col-md col-lg">
+                <button type="button" class="btn btn-primary btn-lg" id="generate">Generate Password</button>
+                <button type="button" class="btn btn-secondary btn-lg" id="copy">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
 <script src="Javascript.js"></script>
 </body>
 
