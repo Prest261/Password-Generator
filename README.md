@@ -9,6 +9,9 @@ When the user clicks the button "Generate Password" a series of prompts are disp
 ## Usage
 This application is meant to be a secure password generator that creates random passwords based on user selected criteria and user selected length. This password generator helps the user create a strong password that will provide greater security for their personal or business needs. Weak passwords can pose a security threat, so an applicaton that generates random passwords quickly and effortlessly can save people time and ensures a secure password is created.
 
+## Github Pages Link:
+https://prest261.github.io/Password-Generator/
+
 ## Installation 
 There are no special installations for this web application.
 
