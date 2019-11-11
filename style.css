@@ -1,6 +1,46 @@
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
+html, body {
+    background-color: black;
+    text-align: center;
+}
 
+.container-fluid {
+    position: relative;
+    margin: 40px auto;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+#output {
+    width: 95%;
+    margin: 20px;
+    box-sizing: border-box;
+    border-style: dashed;
+}
+
+h2 {
+    text-align: left;
+    margin: 20px;
+}
+
+hr {
+    margin: 20px;
+    padding: 2px;
+}
+
+#generate {
+    background-color: red;
+    border-color: red;
+}
+
+button {
+    margin: 20px;
+}
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { ... }
 
