@@ -161,10 +161,11 @@ if (totalchar.length === 0){
     // convert to string:
     var passStr = password.join("");
     console.log(passStr);
-    
-}
-}
 
+    outputArea.addEventListener("click", clipboard);
+    outputArea.value = passStr;
+}
+}
 
 // function for generating the password with the length specified
 function getChar(arr) {
@@ -174,23 +175,17 @@ function getChar(arr) {
   console.log(totalchar);
 }
 
-
-
 // set copy text to clipboard to start when clicked
-
-outputArea.addEventListener("click", clipboard);
-outputArea.textContent = "passStr", passStr;
-
 // function for copying to clipboard
 function clipboard() {
     /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    outputArea.select();
+    outputArea.setSelectionRange(0, 99999); /*For mobile devices*/
   
     /* Copy the text inside the text field */
     document.execCommand("copy");
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-    console.log(password);
+    alert("Copied the text: " + outputArea.value);
+    console.log(passStr);
   }
