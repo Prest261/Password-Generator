@@ -105,7 +105,8 @@ passwordGenerator.addEventListener("click", questions);
 // special characters
 
 function questions(){
-
+password = [];
+totalchar = [];
 // need two functions - 1st function to have user input select the arrays needed
 //    - 2nd needs two parameters (length, specified characters) this function needs to be nested in function 1
 var passLength = prompt("How many characters would you like? Must be between 8-128 characters.");
@@ -123,8 +124,11 @@ var uppercase = confirm("Do you want uppercase characters?");
 var lowercase = confirm("Do you want lowercase characters?");
     // prompt user: do you want numbers?
 var number = confirm("Do you want numeric characters?");
-console.log(passLength, special, uppercase, lowercase, number);
-
+console.log(passLength);
+console.log(special);
+console.log(uppercase);
+console.log(number);
+console.log("lowercase: ", lowercase);
 // if user input selects special characters
 // then randomly pull from special characters array until lenth is met
 if (special === true) {
@@ -162,9 +166,8 @@ if (totalchar.length === 0){
     var passStr = password.join("");
     console.log(passStr);
 
-    outputArea.addEventListener("click", clipboard);
     outputArea.value = passStr;
-}
+  }
 }
 
 // function for generating the password with the length specified
@@ -175,12 +178,15 @@ function getChar(arr) {
   console.log(totalchar);
 }
 
+document.querySelector("#copy").addEventListener("click", clipboard);
 // set copy text to clipboard to start when clicked
 // function for copying to clipboard
 function clipboard() {
     /* Select the text field */
-    outputArea.select();
-    outputArea.setSelectionRange(0, 99999); /*For mobile devices*/
+    var copyText = document.querySelector("#output");
+
+    copyText.select();
+    // outputArea.setSelectionRange(0, 99999); /*For mobile devices*/
   
     /* Copy the text inside the text field */
     document.execCommand("copy");
